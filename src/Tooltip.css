@@ -1,0 +1,66 @@
+/* Center the content on the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Container for the tooltip */
+  .tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Styling for the tooltip */
+  .tooltip {
+    position: absolute;
+    z-index: 10;
+    display: block;
+    background-color: #000;
+    color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: opacity 0.3s;
+    width: 200px; /* Adjust the width as needed */
+    text-align: center; /* Center-align the text within the tooltip */
+  }
+  
+  /* Pointer arrow below the tooltip */
+  .tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #000 transparent;
+  }
+  
+  /* Tooltip position: top */
+  .tooltip-top {
+    margin-bottom: 8px;
+  }
+  
+  /* Tooltip position: bottom */
+  .tooltip-bottom {
+    margin-top: 8px;
+  }
+  
+  /* Tooltip position: left */
+  .tooltip-left {
+    margin-right: 8px;
+  }
+  
+  /* Tooltip position: right */
+  .tooltip-right {
+    margin-left: 8px;
+  }
+  
+  /* Display the tooltip when active */
+  .tooltip.active {
+    display: block;
+  }
+  
